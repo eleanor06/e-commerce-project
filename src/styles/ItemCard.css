@@ -1,0 +1,28 @@
+.item-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .item-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .item-card button {
+    margin-top: 0.5rem;
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .item-card button:hover {
+    background-color: #444;
+  }
+  
