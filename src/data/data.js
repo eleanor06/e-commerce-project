@@ -25,18 +25,7 @@ const products = [
     ],
     category: "Jeans" // Category: Jeans (added specific category)
   },
-  {
-    id: 8,
-    name: "Heart shaped Bluetooth earbuds wireless",
-    image: ["Heart shaped Bluetooth earbuds wireless.jpg"],  
-    price: 5500,
-    views: 0,
-    sold: 50,
-    reviews: [
-      { rating: 5, comment: "the best!" }
-    ],
-    category: "electronics" 
-  }, 
+  
   {
     id: 3,
     name: "Graphic T-Shirt",
@@ -145,20 +134,9 @@ const products = [
     reviews: [
       { rating: 5, comment: "the best!" }
     ],
-    category: "electronics" 
-  }, 
-  {
-    id: 8,
-    name: "Heart shaped Bluetooth earbuds wireless",
-    image: ["Heart shaped Bluetooth earbuds wireless.jpg"],  
-    price: 5500,
-    views: 0,
-    sold: 50,
-    reviews: [
-      { rating: 5, comment: "beautiful" }
-    ],
     category: "accessories" 
   }, 
+
   {
     id: 12,
     name: "purple camera",
@@ -231,7 +209,18 @@ const products = [
     ],
     category: "accessories"
   }, 
-  
+  {
+    id: 8,
+    name: "Heart shaped Bluetooth earbuds wireless",
+    image: ["Heart shaped Bluetooth earbuds wireless.jpg"],  
+    price: 5500,
+    views: 0,
+    sold: 50,
+    reviews: [
+      { rating: 5, comment: "the best!" }
+    ],
+    category: "electronics" 
+  }, 
 ];
 
 export default products;
