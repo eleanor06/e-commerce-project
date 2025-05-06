@@ -12,78 +12,87 @@
   position: relative;
 }
 
-/* Logo Styling */
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: rgb(216, 210, 210);
-  text-decoration: none;
-}
 
-/* Links Section */
-.links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  font-size: 25px;
-}
-
-.links a {
-  color: rgb(158, 52, 82);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
-
-/* Cart Badge Styling */
-.cart-badge {
-  background: crimson;
-  color: white;
-  padding: 0.2rem 0.6rem;
+.logo-img {
+  height: 70px; /* smaller logo */
+  width: auto;
   border-radius: 50%;
-  margin-left: 0.4rem;
-  font-size: 0.75rem;
 }
 
-/* Search and Category Button Container */
 .search-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Align items to the left */
-  gap: 60px; /* Space between the category button and search input */
+  gap: 10px;
   flex-grow: 1;
-  max-width: 600px; /* Limit the width of the search container */
+  justify-content: center;
+}
+
+.search-input {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  width: 220px;
+  font-size: 0.95rem;
+  background-color: #f2f2f2;
 }
 
 .dropdown-btn {
-  position: fixed;       /* Fix the button position */
-  top: 20px;             /* Distance from top */
-  left: 30px;            /* Distance from left */
-  z-index: 999;          /* Make sure it stays above other elements */
-  background-color: rgb(158, 52, 82);
-  color: white;
+  background-color: #8e3b50;
+  color: #fff;
+  padding: 6px 14px; /* thinner button */
+  font-size: 0.95rem;
   border: none;
-  padding: 8px 16px;
-  font-size: 16px;
+  border-radius: 20px;
   cursor: pointer;
-  border-radius: 999px;
 }
 
-/* Category Button Hover Effect */
-.dropdown-btn:hover {
-  background-color: rgb(158, 52, 82);
-}
-
-/* Search Input Styling */
-.search-input {
-  width: 100%;
-  padding: 8px 15px;
-  border-radius: 999px;
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
   border: 1px solid #ccc;
-  outline: none;
-  font-size: 14px;
-  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 8px;
+}
+
+.dropdown-item {
+  padding: 5px 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #6b1f34;
+  font-size: 1rem;
+}
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+  border-radius: 10px;
+  padding: 10px 0;
+  display: none;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+.dropdown {
+  position: relative;
 }
