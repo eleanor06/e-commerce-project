@@ -1,7 +1,8 @@
 // src/pages/Cart.jsx
 import React from "react";
 import "../styles/Cart.css";
-
+import Navbar from "../components/Navbar";
+import products from "../data/data";
 const Cart = ({ cartItems, setCartItems }) => {
   const increase = (product) => {
     const updated = cartItems.map((item) =>
@@ -26,12 +27,15 @@ const Cart = ({ cartItems, setCartItems }) => {
 
   return (
     <div className="cart-page">
-      <h1>Your Cart</h1>
+      
+         <Navbar />
+      <h1 className="your-cart">Your Cart</h1>
       {cartItems.length === 0 ? ( <p>Your cart is empty.</p>) : (
         <div className="cart-items">
           {cartItems.map((item) => (
             <div className="cart-item" key={item.id}>
-              <img src={item.image} alt={item.name} />
+              <img src={`/images/${item.image}`} alt={item.name} />
+
               <div>
                 <h3>{item.name}</h3>
                 <p>{item.price} DZD</p>

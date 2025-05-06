@@ -1,28 +1,30 @@
-// src/pages/Home.jsx
 import React, { useState } from "react";
 import products from "../data/data";
 import ItemCard from "../components/ItemCard";
+import Navbar from "../components/Navbar";
 import "../styles/Home.css";
 
 const Home = ({ addToCart }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchTerm, setSearchTerm] = useState(""); // Search term state
 
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const categories = ["All", "Hoodies", "T-Shirts", "Dresses"];
+
+  // Filter products based on selected category and search term
+  const filteredProducts = products.filter((product) => {
+    const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="home-page">
-      <h1>Shop Our Collection</h1>
+      {/* Pass setSelectedCategory and setSearchTerm to Navbar */}
+      <Navbar setSelectedCategory={setSelectedCategory} setSearchQuery={setSearchTerm} />
 
-      <input
-        type="text"
-        placeholder="Search products..."
-        className="search-input"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
+      <h1 className="collection-title">Shop Our Collection</h1>
 
+      {/* Product Grid */}
       <div className="products">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (

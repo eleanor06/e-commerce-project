@@ -4,7 +4,9 @@ import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import Profile from "./pages/Profile";
-import Navbar from "./components/Navbar";
+import SearchResults from './pages/SearchResults';
+
+
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -32,15 +34,18 @@ function App() {
   };
 
   return (
-    <>
-      <Navbar/>
+    
+      
       <Routes>
+        
         <Route path="/" element={<Home addToCart={addToCart} />} />
         <Route path="/product/:id" element={<ProductDetail addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/profile" element={<Profile />} />
+      
+        <Route path="/search" element={<SearchResults addToCart={addToCart} />} />
       </Routes>
-    </>
+    
   );
 }
 

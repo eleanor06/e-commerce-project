@@ -1,10 +1,46 @@
 
 .home-page {
-    padding: 2rem;
-  }
-  
-  .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-  }
+  background-color: #f1ebec;  
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+
+.navbar {
+  background-color: #daacb3;  
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.collection-title {
+  color: rgb(158, 52, 82);
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: wavy;
+  display: inline-block;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+ @keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+
+
