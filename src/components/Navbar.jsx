@@ -46,12 +46,15 @@ const Navbar = ({ setSearchQuery, setSelectedCategory }) => {
       <div className="search-container">
         {/* Category Dropdown */}
         <div className="dropdown">
-          <button
-            className="dropdown-btn"
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          >
-            Categories
-          </button>
+        <button
+  className="dropdown-btn"
+  aria-expanded={dropdownOpen}
+  aria-controls="category-menu"
+  onClick={() => setDropdownOpen(!dropdownOpen)}
+>
+  Categories
+</button>
+          
           {dropdownOpen && (
             <div className="dropdown-content">
               {categories.map((category) => (
