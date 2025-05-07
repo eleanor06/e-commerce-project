@@ -15,8 +15,9 @@ const Navbar = ({ setSearchQuery, setSelectedCategory }) => {
     "Jeans",
     "Accessories",
     "Cardigans",
-    "bags",
-    "electronics",
+    "Bags",
+    "Electronics",
+    "Shoes",
   ];
 
   const handleSearchChange = (e) => {
